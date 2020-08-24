@@ -132,7 +132,7 @@ You should see the following output:
 ## Clone the repository
 Clone the [HIAS GeniSysAI](https://github.com/LeukemiaAiResearch/GeniSysAI "HIAS GeniSysAI") repository from the [Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss](https://github.com/LeukemiaAiResearch "Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss") Github Organization.
 
-To clone the repository and install the ALL Detection System 2019, make sure you have Git installed. Now navigate to the home directory on your device using terminal/commandline, and then use the following command.
+To clone the repository and install the UP2 NCS1 Facial API Security System, make sure you have Git installed. Now navigate to the home directory on your device using terminal/commandline, and then use the following command.
 
 ```
   git clone https://github.com/LeukemiaAiResearch/GeniSysAI.git
