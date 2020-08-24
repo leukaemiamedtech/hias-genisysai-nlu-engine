@@ -24,8 +24,10 @@
   - [Known & Test Datasets](#known--test-datasets)
   - [Configuration](#configuration)
     - [iotJumpWay](#iotJumpWay)
+    - [HIAS Proxy](#hias-proxy)
   - [Server Test](#server-test)
   - [Service Setup](#service-setup)
+- [HIAS UI](#hias-ui)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
 - [Versioning](#versioning)
@@ -196,22 +198,48 @@ You need to updated the following settings in [Required/confs.json](Required/con
 ### iotJumpWay
 ![iotJumpWay](Media/Images/HIAS-IoT-Create-Device.png)
 
-You need to setup your iotJumpWay device that will be used to communicate with the HIAS iotJumpWay broker. In the HIAS UI, navigate to **IoT->Devices** and then click on the **+** button to create a new device.
+You need to setup your iotJumpWay GeniSysAI security device that will be used to communicate with the HIAS iotJumpWay broker. In the HIAS UI, navigate to **Security->GeniSysAI->Create**.
 
-Once you have created your device you will be taken to the new device page. Add your server name and the information provided on that page to your server configuration.
+- For **Name** add a custom name for your device
+- For **Type** select **Foscam Camera**
+- For **Location** and **Zone** select the iotJumpWay location and zone, if you have not set these up yet you can do this in the **IoT** section.
+- For **IP** add the IP address of your UP2 device.
+- For **Mac** add the MAC address of your UP2 device.
+- For **Stream Port**, you can enter **NA** as this field is not used for an API device.
+- For **Stream Directory**, this can be anything you like, your HIAS proxy will use this name to direct traffic to the correct device.
+- For **Stream File**, you can enter **NA** as this field is not used for an API device.
+- For **Socket Port**, you can enter **NA** as this field is not used for an API device.
+
+Once you have created your device you will be taken to the new device page. Add your server name and the information provided on that page to your  configuration.
 
 ```
   "iotJumpWay": {
-      "host": "",
-      "port": 8883,
-      "ip": "localhost",
-      "lid": 1,
-      "zid": 1,
-      "did": 9,
-      "dn": "",
-      "un": "",
-      "pw": ""
+    "host": "",
+    "port": 8883,
+    "ip": "localhost",
+    "lid": 0,
+    "zid": 0,
+    "did": 0,
+    "dn": "",
+    "un": "",
+    "pw": ""
   }
+```
+
+## HIAS Proxy
+Now you need to the entry to your HIAS proxy that will allow encrypted connection protected by a password. Use the following command to open up your HIAS server configuration:
+
+```
+sudo nano /etc/nginx/sites-available/default
+```
+Now add the following block underneath your existing GeniSysAI server camera proxy rules. You should replace **StreamDirectory** with the value you entered into the HIAS UI for **Stream Directory** and replace **###.###.#.##** with the IP address of your UP2. If you changed the default port number you should also replace **8080** with that port.
+
+```
+location ~* ^/Security/GeniSysAI/StreamDirectory/(.*)$ {
+  auth_basic "Restricted";
+  auth_basic_user_file /etc/nginx/security/htpasswd;
+  proxy_pass http://###.###.#.##:8080/$1;
+}
 ```
 
 ## Server Test
@@ -353,10 +381,19 @@ sudo systemctl status api.service
 
 &nbsp;
 
+# HIAS UI
+![GeniSysAI API HIAS Data](Media/Images/hias-device-life-data.png)
+
+Your UP2 will publish device vitals to the iotJumpWay broker regularly, these can be viewed in the data section by visiting **IoT->Data**. You will also be able to see classifications from the facial recognition classifier as shown below.
+
+![GeniSysAI API HIAS Data](Media/Images/hias-device-api-data.png)
+
 # Contributing
 Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss encourages and welcomes code contributions, bug fixes and enhancements from the Github community.
 
 Please read the [CONTRIBUTING](../../../../CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull requests. You will also find information about our code of conduct on this page.
+
+&nbsp;
 
 ## Contributors
 
