@@ -275,19 +275,20 @@ The output from my test dataset in the Server terminal:
 2020-08-24 19:37:37,533 - NCS1 - INFO - GeniSysAI identified User #1
 2020-08-24 19:37:37,667 - Server - INFO - GeniSys detected 1 known humans and 0 intruders.
 2020-08-24 19:37:37,669 - iotJumpWay - INFO - -- Published to Device channel
-192.168.1.26 - - [24/Aug/2020 19:37:37] "POST /Inference HTTP/1.1" 200 -
+###.###.#.## - - [24/Aug/2020 19:37:37] "POST /Inference HTTP/1.1" 200 -
 2020-08-24 19:37:43,128 - NCS1 - INFO - Calculated Mismatch: 2.003763258457184
 2020-08-24 19:37:43,273 - NCS1 - INFO - Calculated Match: 0.0
 2020-08-24 19:37:43,273 - NCS1 - INFO - GeniSysAI identified User #2
 2020-08-24 19:37:43,276 - Server - INFO - GeniSys detected 1 known humans and 0 intruders.
 2020-08-24 19:37:43,279 - iotJumpWay - INFO - -- Published to Device channel
-192.168.1.26 - - [24/Aug/2020 19:37:43] "POST /Inference HTTP/1.1" 200 -
+###.###.#.## - - [24/Aug/2020 19:37:43] "POST /Inference HTTP/1.1" 200 -
 2020-08-24 19:37:48,736 - NCS1 - INFO - Calculated Mismatch: 1.707361876964569
 2020-08-24 19:37:48,880 - NCS1 - INFO - Calculated Mismatch: 1.7294368147850037
 2020-08-24 19:37:49,025 - NCS1 - INFO - Calculated Match: 0.0
 2020-08-24 19:37:49,025 - NCS1 - INFO - GeniSysAI identified User #3
 2020-08-24 19:37:49,027 - Server - INFO - GeniSys detected 1 known humans and 0 intruders.
 2020-08-24 19:37:49,026 - iotJumpWay - INFO - -- Published to Device channel
+###.###.#.## - - [24/Aug/2020 19:37:49] "POST /Inference HTTP/1.1" 200 -
 ```
 
 ## Service Setup
