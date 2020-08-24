@@ -1,9 +1,9 @@
 # Peter Moss Leukemia AI Research
 ## GeniSysAI
-[![HIAS - Hospital Intelligent Automation System](Media/Images/GeniSysAI.png)](https://github.com/LeukemiaAiResearch/GeniSysAI)
+[![HIAS GeniSysAI](Media/Images/GeniSysAI.png)](https://github.com/LeukemiaAiResearch/GeniSysAI)
 
 
-[![CURRENT VERSION](https://img.shields.io/badge/CURRENT%20VERSION-0.0.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.0.0) [![CURRENT DEV BRANCH](https://img.shields.io/badge/CURRENT%20DEV%20BRANCH-0.1.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.1.0)  [![Contributions Welcome!](https://img.shields.io/badge/Contributions-Welcome-lightgrey.svg)](CONTRIBUTING.md)  [![Issues](https://img.shields.io/badge/Issues-Welcome-lightgrey.svg)](issues) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](LICENSE)
+[![CURRENT VERSION](https://img.shields.io/badge/CURRENT%20VERSION-0.1.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.1.0) [![CURRENT DEV BRANCH](https://img.shields.io/badge/CURRENT%20DEV%20BRANCH-0.2.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.2.0)  [![Contributions Welcome!](https://img.shields.io/badge/Contributions-Welcome-lightgrey.svg)](CONTRIBUTING.md)  [![Issues](https://img.shields.io/badge/Issues-Welcome-lightgrey.svg)](issues) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](LICENSE)
 
 &nbsp;
 
@@ -12,6 +12,7 @@
 - [Introduction](#introduction)
 - [HIAS Network](#hias-network)
 - [GeniSysAI Projects](#genisysai-projects)
+    - [Vision Projects](#vision-projects)
 - [HIAS](#hias)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
@@ -45,6 +46,16 @@ Below you will find details of the main project catagories provided in this repo
 | --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [NLU](NLU "NLU")   | The HIAS Natural Language Understanding projects are open-source NLU Engines that provide natural language support to the HIAS network.                                                                                                                                                                                                                                                                                                   |
 | [Vision](Vision "Vision")   | The HIAS Vision projects provide are open-source computer vision projects that facial recognition support to the HIAS network.                                                                                                                                                                                                                                                                                                   |
+
+## Vision Projects
+
+Below you will find details of the vision projects provided in this repository.
+
+| Projects   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [UP2 NCS1 API](Vision/UP2/NCS1/API "UP2 NCS1 API")   | The UP2 NCS1 Facial API Security System hosts API endpoints exposing a Facenet classifier for remote Facial Recognition requests.  |
+| [UP2 NCS1 Foscam](Vision/UP2/NCS1/Foscam "UP2 NCS1 Foscam")   | The UP2 NCS1 Foscam Security System connects to a Foscam IP camera and uses a Facenet classifier to provide Facial Recognition. |
+| [UP2 NCS1 USB Camera](Vision/UP2/NCS1/Foscam "UP2 NCS1 USB Camera")   | The UP2 NCS1 USB Camera Security System connects to a USB camera and uses a Facenet classifier to provide Facial Recognition.   |
 
 &nbsp;
 
