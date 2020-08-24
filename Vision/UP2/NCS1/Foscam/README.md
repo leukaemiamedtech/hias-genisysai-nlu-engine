@@ -228,7 +228,7 @@ You need to setup your iotJumpWay GeniSysAI security device that will be used to
 - For **IP** add the IP address of your UP2 device.
 - For **Mac** add the MAC address of your UP2 device.
 - For **Stream Port**, add whatever port you used above in your configuration settings.
-- For **Stream Directory**, this can be anything you like, your HIAS proxy will use this name to direct traffic to the correct device **.mjpg**.
+- For **Stream Directory**, this can be anything you like, your HIAS proxy will use this name to direct traffic to the correct device.
 - For **Stream File**, this can be anything you like but it must end with **.mjpg**.
 - For **Socket Port** add what ever port you used in the configuration.
 
