@@ -26,7 +26,9 @@
     - [Foscam](#foscam)
     - [iotJumpWay](#iotJumpWay)
   - [Server Test](#server-test)
+  - [HIAS Proxy](#hias-proxy)
   - [Service Setup](#service-setup)
+- [HIAS UI](#hias-ui)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
 - [Versioning](#versioning)
@@ -246,7 +248,7 @@ Once you have created your device you will be taken to the new device page. Add 
   }
 ```
 
-### HIAS Proxy
+## HIAS Proxy
 Now you need to the entry to your HIAS proxy that will allow encrypted connection protected by a password. Use the following command to open up your HIAS server configuration:
 
 ```
