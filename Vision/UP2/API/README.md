@@ -341,7 +341,14 @@ You should see the following output.
            └─3481 /usr/bin/python3 /home/YourUser/GeniSysAI/Vision/UP2/NCS1/API/Server.py
 ```
 
-Your API server will now start every time you boot up your UP2.
+Your API server will now start every time you boot up your UP2. You can use the following commands to manage your service in the future.
+
+```
+sudo systemctl restart api.service
+sudo systemctl start api.service
+sudo systemctl stop api.service
+sudo systemctl status api.service
+```
 
 &nbsp;
 
