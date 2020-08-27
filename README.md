@@ -3,7 +3,7 @@
 [![HIAS GeniSysAI](Media/Images/GeniSysAI.png)](https://github.com/LeukemiaAiResearch/GeniSysAI)
 
 
-[![CURRENT VERSION](https://img.shields.io/badge/CURRENT%20VERSION-0.1.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.1.0) [![CURRENT DEV BRANCH](https://img.shields.io/badge/CURRENT%20DEV%20BRANCH-0.2.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.2.0)  [![Contributions Welcome!](https://img.shields.io/badge/Contributions-Welcome-lightgrey.svg)](CONTRIBUTING.md)  [![Issues](https://img.shields.io/badge/Issues-Welcome-lightgrey.svg)](issues) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](LICENSE)
+[![CURRENT VERSION](https://img.shields.io/badge/CURRENT%20VERSION-0.1.1-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.1.1) [![CURRENT DEV BRANCH](https://img.shields.io/badge/CURRENT%20DEV%20BRANCH-0.2.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.2.0)  [![Contributions Welcome!](https://img.shields.io/badge/Contributions-Welcome-lightgrey.svg)](CONTRIBUTING.md)  [![Issues](https://img.shields.io/badge/Issues-Welcome-lightgrey.svg)](issues) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](LICENSE)
 
 &nbsp;
 
