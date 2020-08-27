@@ -1,4 +1,4 @@
-# Peter Moss Leukemia AI Research
+# Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss
 ## Contributing to the GeniSysAI projects
 
 We encourage bug fixes and enhancements submitted by the community and there are a number of ways you can contribute towards this repository.
@@ -124,7 +124,7 @@ We use CamelCase for our directory and file names (except images), we would like
 
 # Attribution
 
-Whenever relevant you should add yourself to the contributors section of the READMEs. If you have a public profile on the Peter Moss Leukemia AI Research website, you should use this in your link. Please see the contributing section of any of our READMEs for examples.
+Whenever relevant you should add yourself to the contributors section of the READMEs. If you have a public profile on the Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss website, you should use this in your link. Please see the contributing section of any of our READMEs for examples.
 
 # .md Files
 
