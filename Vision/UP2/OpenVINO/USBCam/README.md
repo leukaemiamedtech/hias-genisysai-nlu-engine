@@ -11,7 +11,8 @@
 - [Introduction](#introduction)
 - [Siamese Neural Networks](#siamese-neural-networks)
 - [Triplet Loss](#triplet-loss)
-- [Intel® Movidius™ Neural Compute Stick](#intel-movidius-neural-compute-stick)
+- [Intel® Movidius™ Neural Compute Stick 1](#intel-movidius-neural-compute-stick-1)
+- [Intel® Movidius™ Neural Compute Stick 2](#intel-movidius-neural-compute-stick-2)
 - [Prerequisites](#prerequisites)
   - [HIAS Server](#hias-server)
 - [System Requirements](#system-requirements)
@@ -39,29 +40,19 @@
 &nbsp;
 
 # Introduction
-The UP2 NCS1 USB Camera Security System connects to a USB camera and uses a **Facenet** classifier to provide Facial Recognition. Facenet uses **Siamese Neural Networks** trained with **Triplet Loss**, and is used in this project due to it's ability to help overcome the **Open Set Recognition Issue** in **facial recogniton**.
-
-The project runs on an **UP Squared** IoT development board and uses an **Intel® Movidius™ Neural Compute Stick 1**.
+The UP2 OpenVINO USB Camera Security System connects to a USB camera and uses **facial detection**/**facial reidentification** and **facial landmark** classifier to provide Facial Recognition with OpenVINO on the CPU and VPU (Intel® Movidius™ Neural Compute Stick and Intel® Neural Compute Stick 2).
 
 &nbsp;
 
-# Siamese Neural Networks
-![Siamese Neural Networks](Media/Images/siamese-neural-networks.jpg)
-
-Siamese Neural Networks are made up of 2 **Convolutional Neural Networks** that are exactly identical, hence the name Siamese Neural Networks. Siamese Neural Networks can be used to differentiate between objects, or in this case, faces. Facenet uses Siamese Neural Networks that have been trained with Triplet Loss.
-
-Given an unseen example and a known example / multiple known examples we can pass the unseen example through the first Siamese Neural Network, and then compare the output encodings with output encodings from the single or multiple examples by calculating the difference between them. Using this method we are able to determine if the example passed to the first network is the same as one of the known examples, verifying if the person is known or not.
-
-&nbsp;
-
-# Triplet Loss
-Triplet Loss was used when training Facenet and reduces the difference between an anchor (an image) and a positive sample from the same class, and increases the difference between the ancher and a negative sample from an opposite class. Basically this means that 2 images with the same class (in this case, the same person) will have a smaller distance than two images from different classes (or 2 different people).
-
-&nbsp;
-
-# Intel® Movidius™ Neural Compute Stick
+# Intel® Movidius™ Neural Compute Stick 1
 ![Intel® Movidius™ Neural Compute Stick](Media/Images/Movidius-NCS1.jpg)
 The Intel® Movidius™ Neural Compute Stick is a piece of hardware, specifically a USB device, used for enhancing the inference process of computer vision models on low-powered/edge devices. The Intel® Movidius™ product is a USB appliance that can be plugged into devices such as Raspberry Pi and UP Squared, and basically takes the processing power off the device and onto the Intel Movidius brand chip, making the classification process a lot faster.
+
+&nbsp;
+
+# Intel® Movidius™ Neural Compute Stick 2
+![Intel® Movidius™ Neural Compute Stick 2](Media/Images/Movidius-NCS2.jpg)
+The Intel® Movidius™ Neural Compute Stick 2 is the latest version of the Neural Compute Stick.
 
 &nbsp;
 
@@ -77,17 +68,17 @@ If you are going to be using the full system you will need to install the [HIAS]
 - Tested on Ubuntu 18.04 & 16.04
 - [Python 3.6](https://www.python.org/ "Python 3.6")
 - Requires PIP3
-- [Intel® Movidius™ NCSDK](https://github.com/movidius/ncsdk "Intel® Movidius™ NCSDK")
 - [Tensorflow 1.4.0](https://www.tensorflow.org/install "Tensorflow 1.4.0")
 
 # Hardware Requirements
-- 1 x [Intel® Movidius™ Neural Compute Stick](https://www.movidius.com/ "Intel® Movidius™ Neural Compute Stick")
+- 1 x [Intel® Movidius™ Neural Compute Stick](https://www.movidius.com/ "Intel® Movidius™ Neural Compute Stick") (Optional)
+- 1 x [Intel® Movidius™ Neural Compute Stick 2](https://www.movidius.com/ "Intel® Movidius™ Neural Compute Stick 2") (Optional)
 - 1 x UP Squared
 
 &nbsp;
 
 # Setup
-Now we will setup the UP2 NCS1 USB Camera Security System. The following tutorial will take you through the setup steps.
+Now we will setup the UP2 OpenVINO USB Camera Security System. The following tutorial will take you through the setup steps.
 
 ## UFW Firewall
 UFW firewall is used to protect the ports of your device. Use the following command to check the status of your firewall:
@@ -194,7 +185,7 @@ Now close your existing terminal and open a new open. Once in your new terminal 
 ## Clone the repository
 Clone the [HIAS GeniSysAI](https://github.com/LeukemiaAiResearch/GeniSysAI "HIAS GeniSysAI") repository from the [Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss](https://github.com/LeukemiaAiResearch "Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss") Github Organization.
 
-To clone the repository and install the UP2 NCS1 USB Camera Security System, make sure you have Git installed. Now navigate to the home directory on your device using terminal/commandline, and then use the following command.
+To clone the repository and install the UP2 OpenVINO USB Camera Security System, make sure you have Git installed. Now navigate to the home directory on your device using terminal/commandline, and then use the following command.
 
 ```
   git clone https://github.com/LeukemiaAiResearch/GeniSysAI.git
