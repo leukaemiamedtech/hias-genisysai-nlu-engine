@@ -18,6 +18,7 @@
     - [Intel® Movidius™ NCSDK](#intel-movidius-ncsdk)
     - [Intel® OpenVINO™ Toolkit](#intel-openvino-toolkit)
 - [Vision Projects](#vision-projects)
+    - [UP2 Vision Projects](#up2-vision-projects)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
 - [Versioning](#versioning)
@@ -75,7 +76,9 @@ The [Intel® OpenVINO™ Toolkit](https://software.intel.com/content/www/us/en/d
 # Vision Projects
 Below you will find details of the Facial Recognition Security System projects provided in this repository.
 
-| Projects   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+## UP2 Vision Projects
+
+| Project   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [UP2 NCS1 API](UP2/NCS1/API "UP2 NCS1 API")   | The UP2 NCS1 Facial API Security System hosts API endpoints exposing a Facenet classifier for remote Facial Recognition requests.  |
 | [UP2 NCS1 Foscam](UP2/NCS1/Foscam "UP2 NCS1 Foscam")   | The UP2 NCS1 Foscam Security System connects to a Foscam IP camera and uses a Facenet classifier to provide Facial Recognition. |

@@ -23,6 +23,7 @@
             - [Intel® Movidius™ NCSDK](#intel-movidius-ncsdk)
             - [Intel® OpenVINO™ Toolkit](#intel-openvino-toolkit)
         - [Vision Projects](#vision-projects)
+        	- [UP2 Vision Projects](#up2-vision-projects)
     - [Natural Language Understanding Engines](#natural-language-understanding=engines)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
@@ -99,13 +100,20 @@ The [Intel® OpenVINO™ Toolkit](https://software.intel.com/content/www/us/en/d
 ### Vision Projects
 Below you will find details of the Facial Recognition Security System projects provided in this repository.
 
-| Projects   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+#### UP2 Vision Projects
+
+| Project   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [UP2 NCS1 API](Vision/UP2/NCS1/API "UP2 NCS1 API")   | The UP2 NCS1 Facial API Security System hosts API endpoints exposing a Facenet classifier for remote Facial Recognition requests.  |
 | [UP2 NCS1 Foscam](Vision/UP2/NCS1/Foscam "UP2 NCS1 Foscam")   | The UP2 NCS1 Foscam Security System connects to a Foscam IP camera and uses a Facenet classifier to provide Facial Recognition. |
 | [UP2 NCS1 USB Camera](Vision/UP2/NCS1/USBCam "UP2 NCS1 USB Camera")   | The UP2 NCS1 USB Camera Security System connects to a USB camera and uses a Facenet classifier to provide Facial Recognition.   |
 | [UP2 OpenVINO Foscam Camera](Vision/UP2/OpenVINO/Foscam "UP2 OpenVINO Foscam Camera")   | The UP2 OpenVINO USB Camera Security System connects to a Foscam IP camera and uses facial detection/facial reidentification and facial landmark classifiers to provide Facial Recognition on CPU or VPU (Neural Compute Stick 1 & 2).   |
 | [UP2 OpenVINO USB Camera](Vision/UP2/OpenVINO/USBCam "UP2 OpenVINO USB Camera")   | The UP2 OpenVINO USB Camera Security System connects to a USB camera and uses facial detection/facial reidentification and facial landmark classifiers to provide Facial Recognition on CPU or VPU (Neural Compute Stick 1 & 2).   |
+
+## Natural Language Understanding Engines
+Natural Language Understanding (NLU) is a popular subset of Artificial Intelligence, but also one of the hardest to overcome. Many believe that by the time we have the capabilities of creating machines capable of really understanding human language and consicously knowing what they are talking about, we will be close to the singularity.
+
+Today's NLUs do not have any conscious understanding of what they are saying, but that doesn't mean that they cannot be used to create advanced systems. There are two main types of NLUs, Retrieval Based and Generative. Retrieval based NLUs
 
 &nbsp;
 
