@@ -24,7 +24,11 @@
             - [Intel® OpenVINO™ Toolkit](#intel-openvino-toolkit)
         - [Vision Projects](#vision-projects)
         	- [UP2 Vision Projects](#up2-vision-projects)
-    - [Natural Language Understanding Engines](#natural-language-understanding=engines)
+    - [Natural Language Understanding Engines](#natural-language-understanding-engines)
+    	- [Types Of Natural Language Understanding Engines](#types-of-natural-language-understanding-engines)
+    	- [Natural Language Understanding Engine Projects](#natural-language-understanding-engine-projects)
+			- [UP2 Natural Language Understanding Engine Projects](#up2-natural-language-understanding-engine-projects)
+			- [RPI Natural Language Understanding Engine Projects](#rpi-natural-language-understanding-engine-projects)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
 - [Versioning](#versioning)
@@ -109,6 +113,30 @@ Below you will find details of the Facial Recognition Security System projects p
 | [UP2 NCS1 USB Camera](Vision/UP2/NCS1/USBCam "UP2 NCS1 USB Camera")   | The UP2 NCS1 USB Camera Security System connects to a USB camera and uses a Facenet classifier to provide Facial Recognition.   |
 | [UP2 OpenVINO Foscam Camera](Vision/UP2/OpenVINO/Foscam "UP2 OpenVINO Foscam Camera")   | The UP2 OpenVINO USB Camera Security System connects to a Foscam IP camera and uses facial detection/facial reidentification and facial landmark classifiers to provide Facial Recognition on CPU or VPU (Neural Compute Stick 1 & 2).   |
 | [UP2 OpenVINO USB Camera](Vision/UP2/OpenVINO/USBCam "UP2 OpenVINO USB Camera")   | The UP2 OpenVINO USB Camera Security System connects to a USB camera and uses facial detection/facial reidentification and facial landmark classifiers to provide Facial Recognition on CPU or VPU (Neural Compute Stick 1 & 2).   |
+
+## Natural Language Understanding Engines
+Natural Language Understanding (NLU) is a popular subset of Artificial Intelligence, but also one of the hardest to overcome. Many believe that by the time we have the capabilities of creating machines capable of really understanding human language, and consicously knowing what they are talking about, we will be close to the sentient AI and the singularity.
+
+### Types Of Natural Language Understanding Engines
+
+Today's NLUs do not have any conscious understanding of what they are saying, but that doesn't mean that they cannot be used to create advanced natural language based systems. There are two main types of NLUs, Retrieval Based and Generative.
+
+Retrieval based NLUs are trained to understand intents, the AI is provided a dataset of different ways a person may say something and the responses are hardcoded response, in short the intelligence is being able to identify what a human or machine has said, not generating it's own understandable and relevant responses. Retrieval based NLUs are generally accompanied by Named Entity Recognition (NER) models. NERs are trained to understand keywords within an intent and assist the NLU to understand intents.
+
+Generative NLUs generate their own responses, these systems are typical based on translation AI models. Generative NLU is making a lot of progress, systems such as [GPT-3](https://github.com/openai/gpt-3) by [OpenAI](https://openai.com/) are really pushing the boundaries of Generative Natural Language Understanding, but we are still quite a way off.
+
+### Natural Language Understanding Engine Projects
+The HIAS GeniSysAI NLUs currently focus on Retrieval Based NLU. Combined with Speech Recognition & Synthesis, and IoT connectivity we can create an AI that can see, hear, understand and speak. Below you will find details of the Natural Language Understanding Engine projects provided in this repository.
+
+#### UP2 Vision Natural Language Understanding Engine Projects
+
+| Project   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+#### RPI Vision Natural Language Understanding Engine Projects
+
+| Project   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 &nbsp;
 
