@@ -56,6 +56,7 @@ Below you will find details of the vision projects provided in this repository.
 | [UP2 NCS1 API](Vision/UP2/NCS1/API "UP2 NCS1 API")   | The UP2 NCS1 Facial API Security System hosts API endpoints exposing a Facenet classifier for remote Facial Recognition requests.  |
 | [UP2 NCS1 Foscam](Vision/UP2/NCS1/Foscam "UP2 NCS1 Foscam")   | The UP2 NCS1 Foscam Security System connects to a Foscam IP camera and uses a Facenet classifier to provide Facial Recognition. |
 | [UP2 NCS1 USB Camera](Vision/UP2/NCS1/USBCam "UP2 NCS1 USB Camera")   | The UP2 NCS1 USB Camera Security System connects to a USB camera and uses a Facenet classifier to provide Facial Recognition.   |
+| [UP2 OpenVINO USB Camera](Vision/UP2/OpenVINO/USBCam "UP2 OpenVINO USB Camera")   | The UP2 OpenVINO USB Camera Security System connects to a USB camera and uses a facial detection/facial reidentification and facial landmark classifiers to provide Facial Recognition on CPU or VPU (Neural Compute Stick 1 & 2).   |
 
 &nbsp;
 
