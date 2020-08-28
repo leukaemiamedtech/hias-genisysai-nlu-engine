@@ -3,7 +3,7 @@
 [![HIAS GeniSysAI](Media/Images/GeniSysAI.png)](https://github.com/LeukemiaAiResearch/GeniSysAI)
 
 
-[![CURRENT VERSION](https://img.shields.io/badge/CURRENT%20VERSION-0.1.1-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.1.1) [![CURRENT DEV BRANCH](https://img.shields.io/badge/CURRENT%20DEV%20BRANCH-0.2.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.2.0)  [![Contributions Welcome!](https://img.shields.io/badge/Contributions-Welcome-lightgrey.svg)](CONTRIBUTING.md)  [![Issues](https://img.shields.io/badge/Issues-Welcome-lightgrey.svg)](issues) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](LICENSE)
+[![CURRENT VERSION](https://img.shields.io/badge/CURRENT%20VERSION-0.2.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.2.0) [![CURRENT DEV BRANCH](https://img.shields.io/badge/CURRENT%20DEV%20BRANCH-0.3.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.3.0)  [![Contributions Welcome!](https://img.shields.io/badge/Contributions-Welcome-lightgrey.svg)](CONTRIBUTING.md)  [![Issues](https://img.shields.io/badge/Issues-Welcome-lightgrey.svg)](issues) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](LICENSE)
 
 &nbsp;
 
@@ -53,9 +53,11 @@ Below you will find details of the vision projects provided in this repository.
 
 | Projects   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [UP2 NCS1 API](Vision/UP2/NCS1/Standard/API "UP2 NCS1 API")   | The UP2 NCS1 Facial API Security System hosts API endpoints exposing a Facenet classifier for remote Facial Recognition requests.  |
-| [UP2 NCS1 Foscam](Vision/UP2/NCS1/Standard/Foscam "UP2 NCS1 Foscam")   | The UP2 NCS1 Foscam Security System connects to a Foscam IP camera and uses a Facenet classifier to provide Facial Recognition. |
-| [UP2 NCS1 USB Camera](Vision/UP2/NCS1/Standard/USBCam "UP2 NCS1 USB Camera")   | The UP2 NCS1 USB Camera Security System connects to a USB camera and uses a Facenet classifier to provide Facial Recognition.   |
+| [UP2 NCS1 API](Vision/UP2/NCS1/API "UP2 NCS1 API")   | The UP2 NCS1 Facial API Security System hosts API endpoints exposing a Facenet classifier for remote Facial Recognition requests.  |
+| [UP2 NCS1 Foscam](Vision/UP2/NCS1/Foscam "UP2 NCS1 Foscam")   | The UP2 NCS1 Foscam Security System connects to a Foscam IP camera and uses a Facenet classifier to provide Facial Recognition. |
+| [UP2 NCS1 USB Camera](Vision/UP2/NCS1/USBCam "UP2 NCS1 USB Camera")   | The UP2 NCS1 USB Camera Security System connects to a USB camera and uses a Facenet classifier to provide Facial Recognition.   |
+| [UP2 OpenVINO Foscam Camera](Vision/UP2/OpenVINO/Foscam "UP2 OpenVINO Foscam Camera")   | The UP2 OpenVINO USB Camera Security System connects to a Foscam IP camera and uses facial detection/facial reidentification and facial landmark classifiers to provide Facial Recognition on CPU or VPU (Neural Compute Stick 1 & 2).   |
+| [UP2 OpenVINO USB Camera](Vision/UP2/OpenVINO/USBCam "UP2 OpenVINO USB Camera")   | The UP2 OpenVINO USB Camera Security System connects to a USB camera and uses facial detection/facial reidentification and facial landmark classifiers to provide Facial Recognition on CPU or VPU (Neural Compute Stick 1 & 2).   |
 
 &nbsp;
 

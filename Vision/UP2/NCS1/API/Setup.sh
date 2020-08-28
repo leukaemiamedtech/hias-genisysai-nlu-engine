@@ -30,31 +30,31 @@ make install
 
 cd ~/
 
-if [ ! -f "GeniSysAI/Vision/UP2/NCS1/StandardAPI/Model/20170512-110547.zip" ]
+if [ ! -f "GeniSysAI/Vision/UP2/NCS1/API/Model/20170512-110547.zip" ]
 then
     echo "-- Facenet zip does not already exists in Model folder, downloading."
     rm -f ./cookies.txt
     touch ./cookies.txt
-    wget --load-cookies ./cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies ./cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=0B5MzpY9kBtDVZ2RpVDYwWmxoSUk' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=0B5MzpY9kBtDVZ2RpVDYwWmxoSUk" -O GeniSysAI/Vision/UP2/NCS1/StandardAPI/Model/20170512-110547.zip && rm -rf ./cookies.txt
+    wget --load-cookies ./cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies ./cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=0B5MzpY9kBtDVZ2RpVDYwWmxoSUk' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=0B5MzpY9kBtDVZ2RpVDYwWmxoSUk" -O GeniSysAI/Vision/UP2/NCS1/API/Model/20170512-110547.zip && rm -rf ./cookies.txt
     echo "-- Facenet zip  downloaded."
 else
     echo "-- Facenet zip already exists in Model folder"
 fi
 
-if [ ! -f "GeniSysAI/Vision/UP2/NCS1/StandardAPI/Model/20170512-110547" ]
+if [ ! -f "GeniSysAI/Vision/UP2/NCS1/API/Model/20170512-110547" ]
 then
     echo "-- Facenet zip not unzipped, unzipping."
-    cd GeniSysAI/Vision/UP2/NCS1/StandardAPI/Model
+    cd GeniSysAI/Vision/UP2/NCS1/API/Model
     unzip 20170512-110547.zip
     cd ~/
 else
     echo "-- Facenet zip already unzipped."
 fi
 
-if [ ! -f "GeniSysAI/Vision/UP2/NCS1/StandardAPI/Model/inception_resnet_v1.py" ]
+if [ ! -f "GeniSysAI/Vision/UP2/NCS1/API/Model/inception_resnet_v1.py" ]
 then
     echo "-- Inception Resnet does not already exists in Model folder, downloading."
-    cd GeniSysAI/Vision/UP2/NCS1/StandardAPI/Model
+    cd GeniSysAI/Vision/UP2/NCS1/API/Model
     wget -c --no-cache -P . https://raw.githubusercontent.com/davidsandberg/facenet/master/src/models/inception_resnet_v1.py -O inception_resnet_v1.py
 	sed -i 's/\r//' *.py
 	chmod +x *.py
@@ -63,7 +63,7 @@ else
     echo "-- Inception Resnet already exists in Model folder."
 fi
 
-cd GeniSysAI/Vision/UP2/NCS1/StandardAPI/Model/20170512-110547
+cd GeniSysAI/Vision/UP2/NCS1/API/Model/20170512-110547
 
 if [ ! -e facenet_celeb.data-00000-of-00001 ]
 then
@@ -102,7 +102,7 @@ then
     echo "-- Graph file exists, skipping compilation"
 else
     echo "-- Compiling graph file"
-    cd GeniSysAI/Vision/UP2/NCS1/StandardAPI/Model/20170512-110547/facenet_celeb_ncs
+    cd GeniSysAI/Vision/UP2/NCS1/API/Model/20170512-110547/facenet_celeb_ncs
     mvNCCompile  facenet_celeb_ncs.meta -w facenet_celeb_ncs -s 12 -in input -on output -o GeniSysAI.graph
     cp GeniSysAI.graph ../..
     cd ../../../
@@ -110,7 +110,7 @@ else
 fi
 
 echo "-- Downloading shape_predictor_68_face_landmarks.dat"
-cd GeniSysAI/Vision/UP2/NCS1/StandardAPI/Model/dlib
+cd GeniSysAI/Vision/UP2/NCS1/API/Model/dlib
 wget http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2 -O shape_predictor_68_face_landmarks.dat.bz2
 bzip2 -dk shape_predictor_68_face_landmarks.dat.bz2
 echo "-- Downloaded and decompressed shape_predictor_68_face_landmarks.dat"
