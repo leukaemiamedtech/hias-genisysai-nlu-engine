@@ -110,11 +110,6 @@ Below you will find details of the Facial Recognition Security System projects p
 | [UP2 OpenVINO Foscam Camera](Vision/UP2/OpenVINO/Foscam "UP2 OpenVINO Foscam Camera")   | The UP2 OpenVINO USB Camera Security System connects to a Foscam IP camera and uses facial detection/facial reidentification and facial landmark classifiers to provide Facial Recognition on CPU or VPU (Neural Compute Stick 1 & 2).   |
 | [UP2 OpenVINO USB Camera](Vision/UP2/OpenVINO/USBCam "UP2 OpenVINO USB Camera")   | The UP2 OpenVINO USB Camera Security System connects to a USB camera and uses facial detection/facial reidentification and facial landmark classifiers to provide Facial Recognition on CPU or VPU (Neural Compute Stick 1 & 2).   |
 
-## Natural Language Understanding Engines
-Natural Language Understanding (NLU) is a popular subset of Artificial Intelligence, but also one of the hardest to overcome. Many believe that by the time we have the capabilities of creating machines capable of really understanding human language and consicously knowing what they are talking about, we will be close to the singularity.
-
-Today's NLUs do not have any conscious understanding of what they are saying, but that doesn't mean that they cannot be used to create advanced systems. There are two main types of NLUs, Retrieval Based and Generative. Retrieval based NLUs
-
 &nbsp;
 
 # Contributing
