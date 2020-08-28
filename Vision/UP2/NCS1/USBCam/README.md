@@ -2,7 +2,7 @@
 ## GeniSysAI
 ### UP2 NCS1 USB Camera Security System
 
-[![HIAS GeniSysAI](../../../../../Media/Images/GeniSysAI.png)](https://github.com/LeukemiaAiResearch/GeniSysAI)
+[![HIAS GeniSysAI](../../../../Media/Images/GeniSysAI.png)](https://github.com/LeukemiaAiResearch/GeniSysAI)
 
 &nbsp;
 
@@ -155,7 +155,7 @@ Using the ls command in your home directory should show you the following.
 Navigate to **GeniSysAI/Vision/UP2/NCS1/Standard/USBCam** directory, this is your project root directory for this tutorial.
 
 ### Developer Forks
-Developers from the Github community that would like to contribute to the development of this project should first create a fork, and clone that repository. For detailed information please view the [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") guide. You should pull the latest code from the development branch.
+Developers from the Github community that would like to contribute to the development of this project should first create a fork, and clone that repository. For detailed information please view the [CONTRIBUTING](../../../../CONTRIBUTING.md "CONTRIBUTING") guide. You should pull the latest code from the development branch.
 
 ```
   git clone -b "0.2.0" https://github.com/LeukemiaAiResearch/GeniSysAI.git
@@ -394,7 +394,7 @@ Your UP2 will publish device vitals to the iotJumpWay broker regularly, these ca
 # Contributing
 Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss encourages and welcomes code contributions, bug fixes and enhancements from the Github community.
 
-Please read the [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull requests. You will also find information about our code of conduct on this page.
+Please read the [CONTRIBUTING](../../../../CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull requests. You will also find information about our code of conduct on this page.
 
 ## Contributors
 
@@ -404,16 +404,16 @@ Please read the [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") do
 
 # Versioning
 
-We use SemVer for versioning. For the versions available, see [Releases](../../../../../releases "Releases").
+We use SemVer for versioning. For the versions available, see [Releases](../../../../releases "Releases").
 
 &nbsp;
 
 # License
 
-This project is licensed under the **MIT License** - see the [LICENSE](../../../../../LICENSE "LICENSE") file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](../../../../LICENSE "LICENSE") file for details.
 
 &nbsp;
 
 # Bugs/Issues
 
-We use the [repo issues](../../../../../issues "repo issues") to track bugs and general requests related to using this project.
+We use the [repo issues](../../../../issues "repo issues") to track bugs and general requests related to using this project.
