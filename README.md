@@ -1,19 +1,29 @@
 # Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss
-## GeniSysAI
-[![HIAS GeniSysAI](Media/Images/GeniSysAI.png)](https://github.com/LeukemiaAiResearch/GeniSysAI)
+## HIAS GeniSysAI Systems
+[![HIAS GeniSysAI Systems](Media/Images/GeniSysAI.png)](https://github.com/LeukemiaAiResearch/GeniSysAI)
 
 
-[![CURRENT VERSION](https://img.shields.io/badge/CURRENT%20VERSION-0.2.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.2.0) [![CURRENT DEV BRANCH](https://img.shields.io/badge/CURRENT%20DEV%20BRANCH-0.3.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.3.0)  [![Contributions Welcome!](https://img.shields.io/badge/Contributions-Welcome-lightgrey.svg)](CONTRIBUTING.md)  [![Issues](https://img.shields.io/badge/Issues-Welcome-lightgrey.svg)](issues) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](LICENSE)
+[![CURRENT VERSION](https://img.shields.io/badge/CURRENT%20VERSION-0.2.1-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.2.1) [![CURRENT DEV BRANCH](https://img.shields.io/badge/CURRENT%20DEV%20BRANCH-0.3.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.3.0)  [![Contributions Welcome!](https://img.shields.io/badge/Contributions-Welcome-lightgrey.svg)](CONTRIBUTING.md)  [![Issues](https://img.shields.io/badge/Issues-Welcome-lightgrey.svg)](issues) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](LICENSE)
 
 &nbsp;
 
 # Table Of Contents
 
 - [Introduction](#introduction)
-- [HIAS Network](#hias-network)
-- [GeniSysAI Projects](#genisysai-projects)
-    - [Vision Projects](#vision-projects)
-- [HIAS](#hias)
+- [HIAS: Hospital Intelligence Automation System](#hias-hospital-intelligent-automation-system)
+- [HIAS GeniSysAI Artificial Intelligence](#hias-genisysai-artificial-intelligence)
+    - [Hardware](#hardware)
+        - [Raspberry Pi](#raspberry-pi)
+        - [UP2 (UP Squared)](#up2-up-squared)
+    - [Facial Recognition Security Systems](#facial-recogntion-security-systems)
+        - [Vision Hardware](#vision-hardware)
+            - [Intel® Movidius™ Neural Compute Stick](#intel-movidius-neural-compute-stick)
+            - [Intel® Movidius™ Neural Compute Stick 2](#intel-movidius-neural-compute-stick-2)
+        - [Vision Software](#vision-software)
+            - [Intel® Movidius™ NCSDK](#intel-movidius-ncsdk)
+            - [Intel® OpenVINO™ Toolkit](#intel-openvino-toolkit)
+        - [Vision Projects](#vision-projects)
+    - [Natural Language Understanding Engines](#natural-language-understanding=engines)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
 - [Versioning](#versioning)
@@ -23,33 +33,71 @@
 &nbsp;
 
 # Introduction
+Artifical Intelligence (AI) is revolutionizing the world we live in. Through the combination of AI technologies and other modern technologies such as the Internet of Things (IoT), we can now automate many areas of our lives. The same is true for the medical industry.
 
-**HIAS GeniSysAI** provides Natural Language Understanding & Facial Recognition applications for the HIAS network. The projects provided in this repository are based on the original [GeniSysAI](https://github.com/GeniSysAI) projects.
+**HIAS GeniSysAI Systems** provide IoT connected Natural Language Understanding & Facial Recognition security systems for the HIAS (Hospital Intelligence Automation System) network. These systems work together to provide an AI assistant for medical facilities that can communicate and control the devices on the HIAS network.
 
 &nbsp;
 
-# HIAS
+# HIAS: Hospital Intelligence Automation System
 
 [![HIAS - Hospital Intelligent Automation System](Media/Images/HIAS-Network.png)](https://github.com/LeukemiaAiResearch/HIAS)
 
-The **HIAS Network** is an open-source Hospital Intelligent Automation System. The system's server powers an intelligent network using a locally hosted, encrypted IoT server and proxy.
+[HIAS](https://github.com/LeukemiaAiResearch/HIAS) is an open-source **Hospital Intelligent Automation System** designed to control and manage an intelligent network of IoT connected devices. The network server provides locally hosted and encrypted databases, and a secure proxy to route traffic to the connected devices.
 
-The server UI provides the capabalities of managing a network of open-soruce intelligent devices and applications. These devices/applications and databases all run and communicate on the local network. This means that premises have more control and security when it comes to their hardware, data and storage.
+The server UI provides the capabilities of managing a network of open-source intelligent devices and applications, these devices/applications and databases all run and communicate on the local network. This means that premises have more control and security when it comes to their hardware, data and storage.
 
 &nbsp;
 
-# GeniSysAI Projects
+# HIAS GeniSysAI Artificial Intelligence
+[GeniSysAI](https://github.com/GeniSysAI) is an open source intelligent home network assistant using Natural Language Understanding, Computer Vision and a range of IoT connected devices.
 
-Below you will find details of the main project catagories provided in this repository.
+The projects provided in this repository are based on the [GeniSysAI NLU (Natural Language Understanding Engine)](https://github.com/GeniSysAI/NLU) and [GeniSysAI Vision](https://github.com/GeniSysAI/Vision) projects.
 
-| Projects   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [NLU](NLU "NLU")   | The HIAS Natural Language Understanding projects are open-source NLU Engines that provide natural language support to the HIAS network.                                                                                                                                                                                                                                                                                                   |
-| [Vision](Vision "Vision")   | The HIAS Vision projects provide are open-source computer vision projects that facial recognition support to the HIAS network.                                                                                                                                                                                                                                                                                                   |
+## Hardware
+HIAS GeniSysAI devices are designed to be used on popular low powered, IoT devices such as **Raspberry Pi** and **Aaeon's UP2 (Up Squared)**. This makes them easy to use and affordable.
 
-## Vision Projects
+### Raspberry Pi
+[![Raspberry Pi 4](Media/Images/raspberry-pi-4.png)](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
 
-Below you will find details of the vision projects provided in this repository.
+Raspberry Pi by the **Raspberry Pi Foundation** are the most popular of the available mini ARM computers. RPIs provide easily affordable single board computers that have been widely adopted by the IoT and AI communities. The HIAS GeniSysAI projects suppory Raspberry Pi 3 and 4.
+
+### UP2 (UP Squared)
+[![UP2](Media/Images/UP2.jpg)](https://up-board.org/upsquared/specifications/)
+
+UP2 by **Aaeon** are also popular with the IoT and AI communities. Unlike the Raspberry Pi, the UP2 have Intel Pentium quad-core processors. The UP2 are bigger than the Raspberry Pi, but are also more expensive.
+
+## Facial Recognition Security Systems
+[![Facial Recognition Security Systems](Media/Images/hias-facial-recognition.jpg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/master/Vision)
+
+Security is an important issue for hospitals and medical centers to consider. Today's Facial Recognition can provide ways of automating security in the medical industry, reducing staffing costs and making medical facilities safer for both patients and staff.
+
+The Facial Recognition Security Systems projects provided in this repository are based on the [GeniSysAI Vision](https://github.com/GeniSysAI/Vision) projects. The systems are IoT connected via the HIAS local [iotJumpWay](https://wwww.iotjumpway.com) broker allowing device to device communication that can provide automated responses to identified users or intruders.
+
+- [View the Facial Recognition Security Systems](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/master/Vision)
+
+### Vision Hardware
+We use Intel® hardware to maximize performance of the HIAS GeniSysAI Facial Recognition Security Systems. You can find out more about these hardwares in this section.
+
+#### Intel® Movidius™ Neural Compute Stick
+[![Intel® Movidius™ Neural Compute Stick](Media/Images/Movidius-NCS1.jpg)](https://software.intel.com/content/www/us/en/develop/articles/intel-movidius-neural-compute-stick.html)
+The Intel® Movidius™ Neural Compute Stick is a USB plug & play AI device for deep learning inference at the edge. The Intel® Movidius™ Neural Compute Stick is built on the Intel® Movidius™ Myriad™ 2 VPU which features 12 programmable shave cores for vision neural network acceleration.
+
+#### Intel® Movidius™ Neural Compute Stick 2
+[![Intel® Movidius™ Neural Compute Stick 2](Media/Images/Movidius-NCS2.jpg)](https://software.intel.com/content/www/us/en/develop/hardware/neural-compute-stick.html)
+The Intel® Movidius™ Neural Compute Stick 2 is a USB plug & play AI device for deep learning inference at the edge. Combined with the Intel® OpenVINO™ Toolkit, developers can develop, fine-tune, and deploy convolutional neural networks (CNNs) on low-power applications that require real-time inference.
+
+### Vision Software
+We use Intel® SKDs and Toolkits to maximize performance of the HIAS GeniSysAI Facial Recognition Security Systems. You can find out more about these softwares in this section.
+
+#### Intel® Movidius™ NCSDK
+For the oldskool Neural Compute Stick developers, we have revived the original GeniSysAI [NCSDK](https://movidius.github.io/ncsdk/) projects. MCSDK was the first Intel SDK for the Neural Compute Stick 1 and provided the software for converting models created with a range of AI frameworks into graphs that are compatible with the NCS1.
+
+#### Intel® OpenVINO™ Toolkit
+The [Intel® OpenVINO™ Toolkit](https://software.intel.com/content/www/us/en/develop/tools/openvino-toolkit.html) is Intel's latest contribution to computer vision developers. The toolkit is based on Convolutional Neural Network and optimizes models used on Intel CPUs/GPUs, VPUs, FPGA etc. Models are converted to [Intermediate Representations (IR)](https://docs.openvinotoolkit.org/latest/openvino_docs_MO_DG_IR_and_opsets.html) which allow them to be used with the [Inference Engine](https://docs.openvinotoolkit.org/2020.2/_docs_IE_DG_Deep_Learning_Inference_Engine_DevGuide.html).
+
+### Vision Projects
+Below you will find details of the Facial Recognition Security System projects provided in this repository.
 
 | Projects   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -69,7 +117,7 @@ Please read the [CONTRIBUTING](CONTRIBUTING.md "CONTRIBUTING") document for a fu
 
 ## Contributors
 
-- [Adam Milton-Barker](https://www.leukemiaresearchassociation.ai/team/adam-milton-barker "Adam Milton-Barker") - [Asociacion De Investigatcion En Inteligencia Artificial Para La Leucemia Peter Moss](https://www.leukemiaresearchassociation.ai "Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss") President & Lead Developer, Sabadell, Spain
+- [Adam Milton-Barker](https://www.leukemiaresearchassociation.ai/team/adam-milton-barker "Adam Milton-Barker") - [Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss](https://www.leukemiaresearchassociation.ai "Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss") President & Lead Developer, Sabadell, Spain
 
 &nbsp;
 
