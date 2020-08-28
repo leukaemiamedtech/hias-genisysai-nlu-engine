@@ -1,8 +1,8 @@
 # Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss
 ## GeniSysAI
-### UP2 NCS1 Foscam Security System
+### UP2 NCS1 Facial API Security System
 
-[![HIAS GeniSysAI](../../../../../Media/Images/GeniSysAI.png)](https://github.com/LeukemiaAiResearch/GeniSysAI)
+[![HIAS GeniSysAI](../../../../Media/Images/GeniSysAI.png)](https://github.com/LeukemiaAiResearch/GeniSysAI)
 
 &nbsp;
 
@@ -16,17 +16,16 @@
   - [HIAS Server](#hias-server)
 - [System Requirements](#system-requirements)
 - [Hardware Requirements](#hardware-requirements)
-- [Setup](#setup)
+- [Server Setup](#server-setup)
   - [UFW Firewall](#ufw-firewall)
   - [Clone the repository](#clone-the-repository)
       - [Developer Forks](#developer-forks)
   - [Install Dependencies](#install-dependencies)
   - [Known & Test Datasets](#known--test-datasets)
   - [Configuration](#configuration)
-    - [Foscam](#foscam)
     - [iotJumpWay](#iotJumpWay)
+    - [HIAS Proxy](#hias-proxy)
   - [Server Test](#server-test)
-  - [HIAS Proxy](#hias-proxy)
   - [Service Setup](#service-setup)
 - [HIAS UI](#hias-ui)
 - [Contributing](#contributing)
@@ -38,7 +37,7 @@
 &nbsp;
 
 # Introduction
-The UP2 NCS1 Foscam Security System connects to a Foscam IP camera and uses a **Facenet** classifier to provide Facial Recognition. Facenet uses **Siamese Neural Networks** trained with **Triplet Loss**, and is used in this project due to it's ability to help overcome the **Open Set Recognition Issue** in **facial recogniton**.
+The UP2 NCS1 Facial API Security System hosts API endpoints exposing a **Facenet** classifier. Facenet uses **Siamese Neural Networks** trained with **Triplet Loss**, and is used in this project due to it's ability to help overcome the **Open Set Recognition Issue** in **facial recogniton**.
 
 The project runs on an **UP Squared** IoT development board and uses an **Intel® Movidius™ Neural Compute Stick 1**.
 
@@ -85,11 +84,11 @@ If you are going to be using the full system you will need to install the [HIAS]
 
 &nbsp;
 
-# Setup
-Now we will setup the UP2 NCS1 Foscam Security System. The following tutorial will take you through the setup steps.
+# Server Setup
+Now we will setup the UP2 NCS1 Facial API Security System. The following tutorial will take you through the setup steps.
 
 ## UFW Firewall
-UFW firewall is used to protect the ports of your device. Use the following command to check the status of your firewall:
+UFW firewall is used to protect the ports of your TASS device. Use the following command to check the status of your firewall:
 
 ```
   sudo ufw status
@@ -135,7 +134,7 @@ You should see the following output:
 ## Clone the repository
 Clone the [HIAS GeniSysAI](https://github.com/LeukemiaAiResearch/GeniSysAI "HIAS GeniSysAI") repository from the [Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss](https://github.com/LeukemiaAiResearch "Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss") Github Organization.
 
-To clone the repository and install the UP2 NCS1 Foscam Security System, make sure you have Git installed. Now navigate to the home directory on your device using terminal/commandline, and then use the following command.
+To clone the repository and install the UP2 NCS1 Facial API Security System, make sure you have Git installed. Now navigate to the home directory on your device using terminal/commandline, and then use the following command.
 
 ```
   git clone https://github.com/LeukemiaAiResearch/GeniSysAI.git
@@ -144,19 +143,19 @@ To clone the repository and install the UP2 NCS1 Foscam Security System, make su
 Once you have used the command above you will see a directory called **GeniSysAI** in your home directory.
 
 ```
-  ls
+ls
 ```
 
 Using the ls command in your home directory should show you the following.
 
 ```
-  GeniSysAI
+GeniSysAI
 ```
 
-Navigate to **GeniSysAI/Vision/UP2/NCS1/Standard/Foscam** directory, this is your project root directory for this tutorial.
+Navigate to **GeniSysAI/Vision/UP2/NCS1/API** directory, this is your project root directory for this tutorial.
 
 ### Developer Forks
-Developers from the Github community that would like to contribute to the development of this project should first create a fork, and clone that repository. For detailed information please view the [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") guide. You should pull the latest code from the development branch.
+Developers from the Github community that would like to contribute to the development of this project should first create a fork, and clone that repository. For detailed information please view the [CONTRIBUTING](../../../../CONTRIBUTING.md "CONTRIBUTING") guide. You should pull the latest code from the development branch.
 
 ```
   git clone -b "0.2.0" https://github.com/LeukemiaAiResearch/GeniSysAI.git
@@ -181,41 +180,20 @@ To execute the script, make enter the following commands. This will take a long 
 ```
 
 ## Known & Test Datasets
-Before you can use your facial identification server, you need to add 1 image of all people that you want your server to classify as known to the **Model/Data/Known** directory and as many different faces as you like to the **Model/Data/Test** directory.
+Before you can use your facial identification server, you need to add 1 image of all people that you want your server to classify as known to the **Model/Data/Known** directory and as many different faces as you like to the **Model/Data/Test** directory. The provided [client](Client.py "client") can be used to loop through this directory and send them to the inference endpoint for classification.
 
 ## Configuration
-You need to updated the following settings in [Required/config.json](Required/config.json "Required/config.json") to ensure that your server is accessible.
+You need to updated the following settings in [Required/confs.json](Required/confs.json "Required/confs.json") to ensure that your server is accessible.
 
-### Foscam
-- The value **Foscam->RTSPuser** should be the RTSP user provided in your Foscam IP camera settings.
-- The value **Foscam->RTSPpass** should be the RTSP password provided in your Foscam IP camera settings.
-- The value **Foscam->RTSPip** should be the IP of your Foscam IP camera.
-- The value **Foscam->RTSPport** should be the RTSP port provided in your Foscam IP camera settings, this is usually 554.
-- The value **Foscam->RTSPendpoint** should be the RTSP endpoint provided in your Foscam IP camera settings, this is usually videoMain.
-- The value **Foscam->IP** should be the IP of your server machine.
-- The value **Foscam->Port** should be the port that the server is listening on.
+- The value **Server->IP** should be the IP of your server machine.
+- The value **Server->Port** should be the port that the server is listening on.
 
 ```
-  "Foscam": {
-      "RTSPuser": "",
-      "RTSPpass": "",
-      "RTSPip": "",
-      "RTSPport": "554",
-      "RTSPendpoint": "videoMain",
+  "Server": {
       "IP": "",
       "Port": 8080
   }
 ```
-You should also update the socket configuration settings.
-
-```
-  "Socket": {
-      "host": "localhost",
-      "port": 8181
-  }
-```
-
-Remember if you change the port settings, you need to allow these through the UFW firewall.
 
 ### iotJumpWay
 ![iotJumpWay](Media/Images/HIAS-IoT-Create-Device.png)
@@ -227,10 +205,10 @@ You need to setup your iotJumpWay GeniSysAI security device that will be used to
 - For **Location** and **Zone** select the iotJumpWay location and zone, if you have not set these up yet you can do this in the **IoT** section.
 - For **IP** add the IP address of your UP2 device.
 - For **Mac** add the MAC address of your UP2 device.
-- For **Stream Port**, add whatever port you used above in your configuration settings.
+- For **Stream Port**, you can enter **NA** as this field is not used for an API device.
 - For **Stream Directory**, this can be anything you like, your HIAS proxy will use this name to direct traffic to the correct device.
-- For **Stream File**, this can be anything you like but it must end with **.mjpg**.
-- For **Socket Port** add what ever port you used in the configuration.
+- For **Stream File**, you can enter **NA** as this field is not used for an API device.
+- For **Socket Port**, you can enter **NA** as this field is not used for an API device.
 
 Once you have created your device you will be taken to the new device page. Add your server name and the information provided on that page to your  configuration.
 
@@ -265,142 +243,157 @@ location ~* ^/Security/GeniSysAI/StreamDirectory/(.*)$ {
 ```
 
 ## Server Test
-To make sure that your server is responding correctly, you need to open two terminals.
+To make sure that your server is responding correctly, you can use [Client.py](Client.py "Client.py") in **Test** mode which will loop through all the images in your **Model/Data/Test** and compare them with your known dataset in **Data/Known**.
 
-In your first terminal, use the following command:
+Execute the following command to start your server:
 
 ```
- python3 FoscamRead.py
+ python3 Server.py
 ```
 
 You should see the following output:
 
 ```
-2020-08-24 20:32:31,361 - FoscamRead - INFO - Helpers class initialization complete.
-2020-08-24 20:32:31,363 - Sockets - INFO - Helpers class initialization complete.
-2020-08-24 20:32:31,363 - Sockets - INFO - Sockets Class initialized.
-2020-08-24 20:32:31,364 - Sockets - INFO - Connected to strem socket: tcp://localhost:8181
-2020-08-24 20:32:31,366 - iotJumpWay - INFO - Helpers class initialization complete.
-2020-08-24 20:32:31,366 - iotJumpWay - INFO - Initiating Local iotJumpWay Device.
-2020-08-24 20:32:31,367 - iotJumpWay - INFO - JumpWayMQTT Device Initiated.
-2020-08-24 20:32:31,367 - iotJumpWay - INFO - Initiating Local iotJumpWay Device Connection.
-2020-08-24 20:32:31,621 - iotJumpWay - INFO - Local iotJumpWay Device Connection Initiated.
-2020-08-24 20:32:31,623 - iotJumpWay - INFO - -- Subscribed to Device Commands Channel
-2020-08-24 20:32:31,674 - iotJumpWay - INFO - Local iotJumpWay Device Connection Successful.
-2020-08-24 20:32:31,674 - iotJumpWay - INFO - rc: 0
-2020-08-24 20:32:31,675 - iotJumpWay - INFO - Published to Device Status 1/Devices/1/19/Status
-2020-08-24 20:32:31,676 - iotJumpWay - INFO - JumpWayMQTT Subscription: 1
-2020-08-24 20:32:31,677 - iotJumpWay - INFO - -- Published to Device channel
-2020-08-24 20:32:36,698 - FoscamRead - INFO - Connected To Camera
-2020-08-24 20:32:36,700 - NCS1 - INFO - Helpers class initialization complete.
-2020-08-24 20:32:40,399 - NCS1 - INFO - Connected to Neural Compute Stick 1
-2020-08-24 20:32:40,436 - NCS1 - INFO - Loaded NCS1 graph
-2020-08-24 20:32:41,060 - NCS1 - INFO - Known data preprocessed!
-2020-08-24 20:32:41,060 - NCS1 - INFO - NCS1 class initialized.
-2020-08-24 20:32:41,061 - FoscamRead - INFO - NCS configured.
-2020-08-24 20:32:41,062 - FoscamRead - INFO - FoscamRead class initialized.
+2020-08-24 19:25:42,157 - Server - INFO - Helpers class initialization complete.
+2020-08-24 19:25:42,159 - iotJumpWay - INFO - Helpers class initialization complete.
+2020-08-24 19:25:42,159 - iotJumpWay - INFO - Initiating Local iotJumpWay Device.
+2020-08-24 19:25:42,160 - iotJumpWay - INFO - JumpWayMQTT Device Initiated.
+2020-08-24 19:25:42,160 - iotJumpWay - INFO - Initiating Local iotJumpWay Device Connection.
+2020-08-24 19:25:42,347 - iotJumpWay - INFO - Local iotJumpWay Device Connection Initiated.
+2020-08-24 19:25:42,349 - iotJumpWay - INFO - -- Subscribed to Device Commands Channel
+2020-08-24 19:25:42,352 - NCS1 - INFO - Helpers class initialization complete.
+2020-08-24 19:25:42,353 - iotJumpWay - INFO - Local iotJumpWay Device Connection Successful.
+2020-08-24 19:25:42,354 - iotJumpWay - INFO - rc: 0
+2020-08-24 19:25:42,355 - iotJumpWay - INFO - Published to Device Status 1/Devices/1/9/Status
+2020-08-24 19:25:42,356 - iotJumpWay - INFO - -- Published to Device channel
+2020-08-24 19:25:42,359 - iotJumpWay - INFO - JumpWayMQTT Subscription: 1
+2020-08-24 19:25:43,249 - NCS1 - INFO - Connected to Neural Compute Stick 1
+2020-08-24 19:25:43,287 - NCS1 - INFO - Loaded NCS1 graph
+2020-08-24 19:25:43,917 - NCS1 - INFO - Known data preprocessed!
+2020-08-24 19:25:46,695 - NCS1 - INFO - NCS1 class initialized.
+2020-08-24 19:25:46,696 - Server - INFO - NCS configured.
+ * Serving Flask app "Server" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://###.###.#.##:8080/ (Press CTRL+C to quit)
 ```
 
 Next open a new terminal and execute the following command:
 
 ```
- python3 FoscamStream.py
+ python3 Client.py Test
 ```
 
-You should see the following output:
+The output from my test dataset in the Client terminal:
 
 ```
-2020-08-24 20:40:13,559 - FoscamStream - INFO - Helpers class initialization complete.
-2020-08-24 20:40:13,560 - Sockets - INFO - Helpers class initialization complete.
-2020-08-24 20:40:13,561 - Sockets - INFO - Sockets Class initialized.
-2020-08-24 20:40:13,562 - Sockets - INFO - Connected to received socket: tcp://localhost:8181
-2020-08-24 20:40:13,563 - FoscamStream - INFO - FoscamStream class initialized.
-2020-08-24 20:40:13,576 - FoscamStream - INFO - Foscam server started on ###.###.#.##:8080
+2020-08-24 19:37:37,027 - Client - INFO - Helpers class initialization complete.
+2020-08-24 19:37:37,028 - Client - INFO - NCS1 class initialized.
+2020-08-24 19:37:37,051 - Client - INFO - Sending Model/Data/Test/1.jpg
+2020-08-24 19:37:42,677 - Client - INFO - Sending Model/Data/Test/2.jpg
+2020-08-24 19:37:48,287 - Client - INFO - Sending Model/Data/Test/3.jpg
 ```
 
-Now visit URL replacing the values as expected: **http://YourUp2Ip:YourPort/YourStreamFile**.
+The output from my test dataset in the Server terminal:
 
-If everything has been done correctly you will now see the live stream from your Foscam camera in your browser.
-
-![GeniSysAI Foscam Local Stream](Media/Images/foscam-local-stream.jpg)
+```
+2020-08-24 19:37:37,532 - NCS1 - INFO - Calculated Match: 0.0
+2020-08-24 19:37:37,533 - NCS1 - INFO - GeniSysAI identified User #1
+2020-08-24 19:37:37,667 - Server - INFO - GeniSys detected 1 known humans and 0 intruders.
+2020-08-24 19:37:37,669 - iotJumpWay - INFO - -- Published to Device channel
+###.###.#.## - - [24/Aug/2020 19:37:37] "POST /Inference HTTP/1.1" 200 -
+2020-08-24 19:37:43,128 - NCS1 - INFO - Calculated Mismatch: 2.003763258457184
+2020-08-24 19:37:43,273 - NCS1 - INFO - Calculated Match: 0.0
+2020-08-24 19:37:43,273 - NCS1 - INFO - GeniSysAI identified User #2
+2020-08-24 19:37:43,276 - Server - INFO - GeniSys detected 1 known humans and 0 intruders.
+2020-08-24 19:37:43,279 - iotJumpWay - INFO - -- Published to Device channel
+###.###.#.## - - [24/Aug/2020 19:37:43] "POST /Inference HTTP/1.1" 200 -
+2020-08-24 19:37:48,736 - NCS1 - INFO - Calculated Mismatch: 1.707361876964569
+2020-08-24 19:37:48,880 - NCS1 - INFO - Calculated Mismatch: 1.7294368147850037
+2020-08-24 19:37:49,025 - NCS1 - INFO - Calculated Match: 0.0
+2020-08-24 19:37:49,025 - NCS1 - INFO - GeniSysAI identified User #3
+2020-08-24 19:37:49,027 - Server - INFO - GeniSys detected 1 known humans and 0 intruders.
+2020-08-24 19:37:49,026 - iotJumpWay - INFO - -- Published to Device channel
+###.###.#.## - - [24/Aug/2020 19:37:49] "POST /Inference HTTP/1.1" 200 -
+```
 
 ## Service Setup
-To ensure that the system will start each time your UP2 boots up, we will create a service. Use the following command to create and open a new service file for reading and processing the streams from the Foscam camera.
+To ensure that the API will start each time your UP2 boots up, we will create a service. Use the following command to create and open a new service file.
 
 ```
-  sudo nano /lib/systemd/system/Foscam.service
+  sudo nano /lib/systemd/system/api.service
 ```
 
 Next add the following code to the file, replacing **YourUser** with the username you use to login to your UP2 with.
 
 ```
 [Unit]
-Description=GeniSysAI Foscam IP Camera Security System
+Description=GeniSysAI Facial API Security System
 After=multi-user.target
 
 [Service]
 User=YourUser
 Type=simple
-ExecStart=/usr/bin/python3 /home/YourUser/GeniSysAI/Vision/UP2/NCS1/Standard/Foscam/Foscam.py
+ExecStart=/usr/bin/python3 /home/YourUser/GeniSysAI/Vision/UP2/NCS1/API/Server.py
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-Save and close the file. Now use the following command to restart the services daemon:
+Save and close the file, and then use the following command to restart the services daemon.
 
 ```
   sudo systemctl daemon-reload
 ```
 
-Now enable, start and check your Foscam reading service:
+Now enable, start and check your service.
 
 ```
-sudo systemctl enable Foscam.service
-sudo systemctl start Foscam.service
-sudo systemctl status Foscam.service
+sudo systemctl enable api.service
+sudo systemctl start api.service
+sudo systemctl status api.service
 ```
 
 You should see the following output.
 
 ```
-● api.service - GeniSysAI Foscam IP Camera Security System
-   Loaded: loaded (/lib/systemd/system/Foscam.service; enabled; vendor preset: enabled)
+● api.service - GeniSysAI Facial API Security System
+   Loaded: loaded (/lib/systemd/system/api.service; enabled; vendor preset: enabled)
    Active: active (running) since Mon 2020-08-24 19:45:31 CEST; 4s ago
  Main PID: 3481 (python3)
     Tasks: 4
    Memory: 46.3M
       CPU: 2.878s
-   CGroup: /system.slice/Foscam.service
-           └─3481 /usr/bin/python3 /home/YourUser/GeniSysAI/Vision/UP2/NCS1/Standard/Foscam/Foscam.py
+   CGroup: /system.slice/api.service
+           └─3481 /usr/bin/python3 /home/YourUser/GeniSysAI/Vision/UP2/NCS1/API/Server.py
 ```
 
-Your system will now start every time you boot up your UP2. You can use the following commands to manage your service in the future.
+Your API server will now start every time you boot up your UP2. You can use the following commands to manage your service in the future.
 
 ```
-sudo systemctl restart Foscam.service
-sudo systemctl start Foscam.service
-sudo systemctl stop Foscam.service
-sudo systemctl status Foscam.service
+sudo systemctl restart api.service
+sudo systemctl start api.service
+sudo systemctl stop api.service
+sudo systemctl status api.service
 ```
+
+&nbsp;
 
 # HIAS UI
-![GeniSysAI Foscam HIAS Stream](Media/Images/foscam-hias-stream.jpg)
-
-If you visit the device page in the HIAS UI by navigating to **Security->GeniSysAI->List**, you will be able to locate your device. On your device page you will be able to see your stream. This stream is encrypted and is password protected. If you have not authenticated yourself for the HIAS streams a pop up will ask you to provide your HIAS UI user credentials.
-
-![GeniSysAI Foscam HIAS Data](Media/Images/hias-device-life-data.png)
+![GeniSysAI API HIAS Data](Media/Images/hias-device-life-data.png)
 
 Your UP2 will publish device vitals to the iotJumpWay broker regularly, these can be viewed in the data section by visiting **IoT->Data**. You will also be able to see classifications from the facial recognition classifier as shown below.
 
-![GeniSysAI Foscam HIAS Data](Media/Images/hias-device-foscam-data.png)
-
-&nbsp;
+![GeniSysAI API HIAS Data](Media/Images/hias-device-api-data.png)
 
 # Contributing
 Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss encourages and welcomes code contributions, bug fixes and enhancements from the Github community.
 
-Please read the [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull requests. You will also find information about our code of conduct on this page.
+Please read the [CONTRIBUTING](../../../../CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull requests. You will also find information about our code of conduct on this page.
+
+&nbsp;
 
 ## Contributors
 
@@ -410,16 +403,16 @@ Please read the [CONTRIBUTING](../../../../../CONTRIBUTING.md "CONTRIBUTING") do
 
 # Versioning
 
-We use SemVer for versioning. For the versions available, see [Releases](../../../../../releases "Releases").
+We use SemVer for versioning. For the versions available, see [Releases](../../../../releases "Releases").
 
 &nbsp;
 
 # License
 
-This project is licensed under the **MIT License** - see the [LICENSE](../../../../../LICENSE "LICENSE") file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](../../../../LICENSE "LICENSE") file for details.
 
 &nbsp;
 
 # Bugs/Issues
 
-We use the [repo issues](../../../../../issues "repo issues") to track bugs and general requests related to using this project.
+We use the [repo issues](../../../../issues "repo issues") to track bugs and general requests related to using this project.
