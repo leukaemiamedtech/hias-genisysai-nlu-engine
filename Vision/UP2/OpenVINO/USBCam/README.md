@@ -382,7 +382,7 @@ The default configuration runs the system on the CPU. In the configuration setti
 Running on the CPU we can see around ~4 - 4.2 FPS, running on NCS1 we can see ~4.7 - 4.9, running on NCS2 we can see ~4.8 - 4.9.
 
 ## Service Setup
-To ensure that the system will start each time your UP2 boots up, we will create two services.
+To ensure that the system will start each time your UP2 boots up, we will create a service.
 
 First add your user to the video group, this will allow you to access the camera without sudo. Replace **YourUser** with the username you use to login to the UP2 with.
 
