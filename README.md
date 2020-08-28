@@ -74,7 +74,7 @@ Security is an important issue for hospitals and medical centers to consider. To
 
 The Facial Recognition Security Systems projects provided in this repository are based on the [GeniSysAI Vision](https://github.com/GeniSysAI/Vision) projects. The systems are IoT connected via the HIAS local [iotJumpWay](https://wwww.iotjumpway.com) broker allowing device to device communication that can provide automated responses to identified users or intruders.
 
-- [View the Facial Recognition Security Systems](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/master/Vision)
+- [View the Facial Recognition Security Systems](Vision)
 
 ### Vision Hardware
 We use Intel® hardware to maximize performance of the HIAS GeniSysAI Facial Recognition Security Systems. You can find out more about these hardwares in this section.
