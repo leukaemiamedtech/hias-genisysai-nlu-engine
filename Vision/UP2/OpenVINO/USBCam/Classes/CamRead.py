@@ -106,6 +106,14 @@ class CamRead(Thread):
 								"Message": mesg
 							})
 
+							# Send iotJumpWay notification
+							self.iot.channelPub("Cameras", {
+								"Type": "GeniSysAI",
+								"Sensor": "USB Camera",
+								"Value": label,
+								"Message": mesg
+							})
+
 				cv2.putText(frame, fps, (width-120, 26), cv2.FONT_HERSHEY_SIMPLEX,
 							0.3, self.color, 1, cv2.LINE_AA)
 

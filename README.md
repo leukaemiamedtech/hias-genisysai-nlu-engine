@@ -3,7 +3,7 @@
 [![HIAS GeniSysAI Systems](Media/Images/GeniSysAI.png)](https://github.com/LeukemiaAiResearch/GeniSysAI)
 
 
-[![CURRENT VERSION](https://img.shields.io/badge/CURRENT%20VERSION-0.2.1-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.2.1) [![CURRENT DEV BRANCH](https://img.shields.io/badge/CURRENT%20DEV%20BRANCH-0.3.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.3.0)  [![Contributions Welcome!](https://img.shields.io/badge/Contributions-Welcome-lightgrey.svg)](CONTRIBUTING.md)  [![Issues](https://img.shields.io/badge/Issues-Welcome-lightgrey.svg)](issues) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](LICENSE)
+[![CURRENT VERSION](https://img.shields.io/badge/CURRENT%20VERSION-0.3.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.3.0) [![CURRENT DEV BRANCH](https://img.shields.io/badge/CURRENT%20DEV%20BRANCH-0.4.0-blue.svg)](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/0.4.0)  [![Contributions Welcome!](https://img.shields.io/badge/Contributions-Welcome-lightgrey.svg)](CONTRIBUTING.md)  [![Issues](https://img.shields.io/badge/Issues-Welcome-lightgrey.svg)](issues) [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](LICENSE)
 
 &nbsp;
 
@@ -137,6 +137,7 @@ The HIAS GeniSysAI NLUs currently focus on Retrieval Based NLU. Combined with Sp
 
 | Project   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Raspberry Pi 3 NLU](NLU/RPI/RPI3 "Raspberry Pi 3 NLU")   | The Raspberry Pi 3 NLU hosts API endpoints exposing the Natural Language Understanding Engine for remote intent classification requests.  |
 
 &nbsp;
 
