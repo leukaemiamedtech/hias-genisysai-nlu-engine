@@ -31,6 +31,7 @@
   - [HIAS Proxy](#hias-proxy)
   - [Service Setup](#service-setup)
 - [HIAS UI](#hias-ui)
+- [GeniSysAI NLU Communication](#genisysai-nlu-communication)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
 - [Versioning](#versioning)
@@ -467,6 +468,25 @@ If you visit the device page in the HIAS UI by navigating to **Security->GeniSys
 Your UP2 will publish device vitals to the iotJumpWay broker regularly, these can be viewed in the data section by visiting **IoT->Data**. You will also be able to see classifications from the facial recognition classifier as shown below.
 
 ![GeniSysAI USB HIAS Data](Media/Images/hias-device-usb-data.png)
+
+&nbsp;
+
+# GeniSysAI NLU Communication
+This system is able to communicate with the [GeniSysAI RPI3 Natural Language Understanding Engine](https://github.com/LeukemiaAiResearch/GeniSysAI/tree/master/NLU/RPI/RPI3). When a known user is detected a notification is sent to the **Cameras** channel, when the HIAS iotJumpWay listener receives this message it will check three things:
+
+- The last time the user was welcomed by the NLU Engine
+- If there is an online NLU Engine in the zone that the user was detected in
+- If the user is logged into their [HIAS Staff Android Application](https://github.com/LeukemiaAiResearch/HIAS-Staff-Android)
+
+Current functionality will do the following:
+
+- If the user has not been welcomed in the last hour and there is an online NLU engine in the zone the user was detected in, a command will be sent to that NLU Engine, and if the NLU Engine is in Audio mode, the AI will welcome the user through the speaker connected to the Raspberry Pi.
+
+Future functionality will include:
+
+- If there is no online NLU but the user is logged into their [HIAS Staff Android Application](https://github.com/LeukemiaAiResearch/HIAS-Staff-Android), the command will be sent to the application and the app will welcome the user.
+
+- On board speech recognition for microphones that are good enough to receive audio from the whole room allowing direct communication with NLU Engine and NLU -> Intruder dialog.
 
 &nbsp;
 
