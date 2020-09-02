@@ -1,0 +1,52 @@
+{
+    "System": {
+        "IP": "",
+        "IPInfo": "",
+        "Logs": "Logs/",
+        "Port": 8080
+    },
+    "NLU": {
+        "Activation": "softmax",
+        "BatchSize": 32,
+        "defaultResponses": [
+            "Sorry, I did not understand you",
+            "Sorry, could you rephrase"
+        ],
+        "Entities": "Mitie",
+        "EntitiesDat": "Model/entities.dat",
+        "FcLayers": 3,
+        "FcUnits": 32,
+        "Epochs": 1000,
+        "Regression": true,
+        "Threshold": 0.5,
+        "TFLearn": {
+            "Data": "Model/model.json",
+            "Logs": "Model/TFLearn",
+            "LogsLevel": 3,
+            "Path": "Model/nlu.tflearn"
+        },
+        "Mitie": {
+            "Threshold": 4.00,
+            "Location": "MITIE/mitielib",
+            "ModelLocation": "MITIE/MITIE-models/english/total_word_feature_extractor.dat"
+        },
+        "repetition": [{
+            "ignoreCount": 5,
+            "ignoreReset": 60
+        }],
+        "ShowMetric": true
+    },
+    "iotJumpWay": {
+        "lid": 0,
+        "zid": 0,
+        "did": 0,
+        "dn": "",
+        "host": "",
+        "port": 8883,
+        "un": "",
+        "pw": "",
+        "Channels": {
+            "Commands": "Commands"
+        }
+    }
+}

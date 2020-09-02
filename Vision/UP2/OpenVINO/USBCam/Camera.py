@@ -104,7 +104,7 @@ class Camera():
 
 		# Camera read and stream
 		Thread(target=CamRead.run, args=(self, ), daemon=True).start()
-		Thread(target=CamStream.run, args=(self,), daemon=True).start()
+		Thread(target=CamStream.run, args=(self, ), daemon=True).start()
 
 	def signal_handler(self, signal, frame):
 		self.Helpers.logger.info("Disconnecting")

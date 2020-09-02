@@ -110,6 +110,14 @@ class FoscamRead(Thread):
 								"Message": mesg
 							})
 
+							# Send iotJumpWay notification
+							self.iot.channelPub("Cameras", {
+								"Type": "GeniSysAI",
+								"Sensor": "Foscam Camera",
+								"Value": label,
+								"Message": mesg
+							})
+
 				cv2.putText(frame, fps, (width-170, 26), cv2.FONT_HERSHEY_SIMPLEX,
 							0.5, self.color, 1, cv2.LINE_AA)
 
