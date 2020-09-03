@@ -8,7 +8,7 @@
 # Title:         TTS Class
 # Description:   Text To Speech helper functions.
 # License:       MIT License
-# Last Modified: 2020-08-19
+# Last Modified: 2020-09-04
 #
 ############################################################################################
 
@@ -16,6 +16,7 @@ import os
 import time
 
 from gtts import gTTS
+from random import randint
 
 from Classes.Helpers import Helpers
 
@@ -34,7 +35,7 @@ class TTS():
 	def speak(self, toSpeak):
 
 		ttsAPI = gTTS(toSpeak, lang = "en-us")
-		ttsFile = "temp.mp3"
+		ttsFile = str(randint(0, 100000)) + "_temp.mp3"
 		ttsAPI.save(ttsFile)
 		os.system(" mpg123 " + ttsFile)
 		os.system("rm %s" % (ttsFile))

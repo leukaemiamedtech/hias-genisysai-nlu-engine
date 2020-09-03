@@ -1,6 +1,6 @@
 # Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss
 ## GeniSysAI
-### Natural Language Understanding Engine
+### Raspberry Pi 3 Natural Language Understanding Engine
 
 [![HIAS GeniSysAI](../../../Media/Images/GeniSysAI.png)](https://github.com/LeukemiaAiResearch/GeniSysAI)
 
@@ -11,8 +11,9 @@
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
   - [HIAS Server](#hias-server)
-- [Software Requirements](#software-requirements)
 - [Hardware Requirements](#hardware-requirements)
+- [System Requirements](#system-requirements)
+- [Software Requirements](#software-requirements)
 - [Installation](#server-setup)
   - [UFW Firewall](#ufw-firewall)
   - [Clone the repository](#clone-the-repository)
@@ -40,7 +41,7 @@
 &nbsp;
 
 # Introduction
-The **Acute Lymphoblastic Detection System 2019 Chatbot** is a Tensorflow Natural Language Understanding Engine trained with basic knowledge of AML & ALL. The system hosts a REST API endpoint that exposes the model for remote classification. A small dataset is provided for you to build on and is based on knowledge about Acute Myeloid Leukemia.
+The **HIAS GeniSysAI Raspberry Pi 3 Natural Language Understanding Engine** is an open-source Tensorflow Natural Language Understanding Engine. The system hosts a REST API endpoint that exposes the model for remote classification. A small dataset is provided for you to build on.
 
 &nbsp;
 
@@ -52,8 +53,15 @@ If you are going to be using the full system you will need to install the [HIAS]
 
 &nbsp;
 
-# System Requirements
+# Hardware Requirements
+![HIAS GeniSysAI](Media/Images/hardware.jpg)
+- 1 x Desktop device or laptop for development and training, preferably with an NVIDIA GPU
+- 1 x Raspberry Pi
+- 1 x Audio speaker (Jack connection)
 
+&nbsp;
+
+# System Requirements
 - [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspberry-pi-os/)
 - [Python 3.7](https://www.python.org/ "Python 3.7")
 - PIP3
@@ -61,20 +69,11 @@ If you are going to be using the full system you will need to install the [HIAS]
 &nbsp;
 
 # Software Requirements
-
 - [Tensorflow 1.14.0](https://github.com/lhelontra/tensorflow-on-arm/releases/tag/v1.14.0-buster "Tensorflow 1.14.0")
 - [TFLearn](http://tflearn.org/ "TFLearn")
 - [MITIE](https://github.com/mit-nlp/MITIE "MITIE")
 - [NTLK (Natural Language Toolkit)](https://www.nltk.org/ "NTLK (Natural Language Toolkit)")
 - [IPInfo.io Key](https://ipinfo.io/ "IPInfo.io Key")
-
-&nbsp;
-
-# Hardware Requirements
-
-- 1 x Desktop device or laptop for development and training, preferably with an NVIDIA GPU
-- 1 x Raspberry Pi
-- 1 x Audio speaker (Jack connection)
 
 &nbsp;
 
@@ -143,7 +142,7 @@ First of all update the core settings. You need add the IP address of your Raspb
 
 ### iotJumpWay
 ![iotJumpWay](Media/Images/create.jpg)
-Now you need to create your HIAS iotJumpWay NLU device to retrieve your MQTT credentials. Head to your HIAS UI and navigate to **NLU->Create**. Fill out the details on that page and click **Submit**. YOur device will be created and you will be redirected to the device page where you can access your credentials. Use the credentials to complete your iotJumpWay configuration.
+Now you need to create your HIAS iotJumpWay NLU device to retrieve your MQTT credentials. Head to your HIAS UI and navigate to **NLU->Create**. Fill out the details on that page making sure you use **API** for the **API Path** and click **Submit** unless this is not your first installation. Your device will be created and you will be redirected to the device page where you can access your credentials. Use the credentials to complete your iotJumpWay configuration.
 ```
   "iotJumpWay": {
       "lid": 0,
@@ -165,12 +164,14 @@ Now you need to the add your HIAS proxy that will allow encrypted connection to 
 ```
 sudo nano /etc/nginx/sites-available/default
 ```
-Now add the following block underneath your existing GeniSysAI proxy rules. You should replace **API** with the value you entered into the HIAS UI for **API Path** and replace **###.###.#.##** with the IP address of your Raspberry Pi. If you changed the default port number you should also replace **8080** with that port.
+Now add the following block underneath your existing GeniSysAI proxy rules. You should replace **###.###.#.##** with the IP address of your Raspberry Pi. If you changed the default port number you should also replace **8080** with that port.
 
 ```
-location ~* ^/GeniSysAI/NLU/API/(.*)$ {
-  proxy_pass http://###.###.#.##:8080/$1;
-}
+  location ~ ^/GeniSysAI/NLU/API/(.*)$ {
+    auth_basic "Restricted";
+    auth_basic_user_file /etc/nginx/security/htpasswd;
+    proxy_pass http://192.168.1.55:8080/$1;
+  }
 ```
 
 &nbsp;
