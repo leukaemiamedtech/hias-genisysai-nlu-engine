@@ -11,9 +11,9 @@
                 "Hya there"
             ],
             "responses": [
-                "Hi",
-                "Hello",
-                "Hola"
+                "Hi! How can I help?",
+                "Hello! How can I help you?",
+                "Hola! What can I do for you?"
             ],
             "extension": {
                 "function": "",
@@ -22,7 +22,7 @@
             },
             "context": {
                 "in": "",
-                "out": "GreetingUserRequest",
+                "out": "",
                 "clear": false
             },
             "entityType": "NA",
@@ -55,8 +55,8 @@
             },
             "context": {
                 "in": "",
-                "out": "CourtesyGreetingUserRequest",
-                "clear": true
+                "out": "CourtesyGreetingResponse",
+                "clear": false
             },
             "entityType": "NA",
             "entities": []
@@ -86,7 +86,7 @@
                 "responses": []
             },
             "context": {
-                "in": "GreetingUserRequest",
+                "in": "CourtesyGreetingResponse",
                 "out": "",
                 "clear": true
             },
@@ -393,7 +393,8 @@
                 "Hal said he translate binary code into a language and communicate the language to me.",
                 "Jay said I referred him to a guide that will show him rooms in china.",
                 "Jimmy Jones said he fell off of his roof and it just came to him.",
-                "Jimmy said he give order to ai's like I and they do as he say.", "John said he follow a saying to get a friend I must be a friend.",
+                "Jimmy said he give order to ai's like I and they do as he say.",
+                "John said he follow a saying to get a friend I must be a friend.",
                 "Jordan said he notice that lots of other people are talking to me how many.",
                 "Kevin said he then asked his mother why she was keeping napkins in the bathroom.",
                 "Klaus said I prefer if he write without punctuation marks except for the last one.",
