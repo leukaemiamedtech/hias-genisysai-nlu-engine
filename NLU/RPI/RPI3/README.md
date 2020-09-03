@@ -11,8 +11,9 @@
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
   - [HIAS Server](#hias-server)
-- [Software Requirements](#software-requirements)
 - [Hardware Requirements](#hardware-requirements)
+- [System Requirements](#system-requirements)
+- [Software Requirements](#software-requirements)
 - [Installation](#server-setup)
   - [UFW Firewall](#ufw-firewall)
   - [Clone the repository](#clone-the-repository)
@@ -52,8 +53,15 @@ If you are going to be using the full system you will need to install the [HIAS]
 
 &nbsp;
 
-# System Requirements
+# Hardware Requirements
+![HIAS GeniSysAI](Media/Images/hardware.jpg)
+- 1 x Desktop device or laptop for development and training, preferably with an NVIDIA GPU
+- 1 x Raspberry Pi
+- 1 x Audio speaker (Jack connection)
 
+&nbsp;
+
+# System Requirements
 - [Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspberry-pi-os/)
 - [Python 3.7](https://www.python.org/ "Python 3.7")
 - PIP3
@@ -61,20 +69,11 @@ If you are going to be using the full system you will need to install the [HIAS]
 &nbsp;
 
 # Software Requirements
-
 - [Tensorflow 1.14.0](https://github.com/lhelontra/tensorflow-on-arm/releases/tag/v1.14.0-buster "Tensorflow 1.14.0")
 - [TFLearn](http://tflearn.org/ "TFLearn")
 - [MITIE](https://github.com/mit-nlp/MITIE "MITIE")
 - [NTLK (Natural Language Toolkit)](https://www.nltk.org/ "NTLK (Natural Language Toolkit)")
 - [IPInfo.io Key](https://ipinfo.io/ "IPInfo.io Key")
-
-&nbsp;
-
-# Hardware Requirements
-
-- 1 x Desktop device or laptop for development and training, preferably with an NVIDIA GPU
-- 1 x Raspberry Pi
-- 1 x Audio speaker (Jack connection)
 
 &nbsp;
 
