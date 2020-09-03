@@ -67,7 +67,6 @@ class NLU():
 		commandData = json.loads(payload.decode("utf-8"))
 
 		if commandData["Command"] == "Welcome":
-			print(commandData["Command"])
 			speak = "Hi " + commandData["Value"] + ", how are you?"
 			self.Helpers.logger.info(speak)
 			self.Engine.TTS.speak(speak)
@@ -231,15 +230,16 @@ def Audio():
 	endpoint.
 	"""
 
-	NLU.Engine.session()
-
 	if request.headers["Content-Type"] == "application/json":
 		query = request.json
+		NLU.Engine.session()
 		response = NLU.communicate(query["query"])
+		NLU.Helpers.logger.info("Received: " + query["query"])
 		speak = str(response["ResponseData"][0]["Response"])
 
-		NLU.Helpers.logger.info(speak)
-		NLU.Engine.TTS.speak(speak)
+		NLU.Helpers.logger.info("Response: " + speak)
+
+		Thread(target=NLU.Engine.TTS.speak, args=(speak,), daemon=True).start()
 
 		return Response(response=json.dumps(response, indent=4, sort_keys=True),
 						status=200, mimetype="application/json")

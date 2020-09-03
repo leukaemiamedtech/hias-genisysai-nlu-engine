@@ -27,7 +27,6 @@
     - [Natural Language Understanding Engines](#natural-language-understanding-engines)
     	- [Types Of Natural Language Understanding Engines](#types-of-natural-language-understanding-engines)
     	- [Natural Language Understanding Engine Projects](#natural-language-understanding-engine-projects)
-			- [UP2 Natural Language Understanding Engine Projects](#up2-natural-language-understanding-engine-projects)
 			- [RPI Natural Language Understanding Engine Projects](#rpi-natural-language-understanding-engine-projects)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
@@ -45,7 +44,6 @@ Artifical Intelligence (AI) is revolutionizing the world we live in. Through the
 &nbsp;
 
 # HIAS: Hospital Intelligence Automation System
-
 [![HIAS - Hospital Intelligent Automation System](Media/Images/HIAS-Network.png)](https://github.com/LeukemiaAiResearch/HIAS)
 
 [HIAS](https://github.com/LeukemiaAiResearch/HIAS) is an open-source **Hospital Intelligent Automation System** designed to control and manage an intelligent network of IoT connected devices. The network server provides locally hosted and encrypted databases, and a secure proxy to route traffic to the connected devices.
@@ -127,11 +125,6 @@ Generative NLUs generate their own responses, these systems are typical based on
 
 ### Natural Language Understanding Engine Projects
 The HIAS GeniSysAI NLUs currently focus on Retrieval Based NLU. Combined with Speech Recognition & Synthesis, and IoT connectivity we can create an AI that can see, hear, understand and speak. Below you will find details of the Natural Language Understanding Engine projects provided in this repository.
-
-#### UP2 Vision Natural Language Understanding Engine Projects
-
-| Project   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 #### RPI Vision Natural Language Understanding Engine Projects
 
