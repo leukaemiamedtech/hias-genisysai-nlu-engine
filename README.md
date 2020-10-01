@@ -1,5 +1,5 @@
 # Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss
-## HIAS GeniSysAI Systems
+## HIAS GeniSysAI Natural Language Understanding
 [![HIAS GeniSysAI Systems](Media/Images/GeniSysAI.png)](https://github.com/LeukemiaAiResearch/GeniSysAI)
 
 
@@ -79,7 +79,7 @@ The HIAS GeniSysAI NLUs currently focus on Retrieval Based NLU. Combined with Sp
 
 | Project   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Raspberry Pi 3 TF1.14.0 NLU](NLU/RPI/RPI3 "Raspberry Pi 3 TF1.14.0 NLU")   | The Raspberry Pi 3 NLU hosts API endpoints exposing the Natural Language Understanding Engine for remote intent classification requests.  |
+| [Raspberry Pi 3 TF1.14.0 NLU](NLU/RPI/RPI3/TF1.14.0 "Raspberry Pi 3 TF1.14.0 NLU")   | The Raspberry Pi 3 NLU hosts API endpoints exposing the Natural Language Understanding Engine for remote intent classification requests built using Tensorflow 1.14.0.  |
 
 &nbsp;
 
