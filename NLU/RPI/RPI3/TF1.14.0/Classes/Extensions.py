@@ -1,5 +1,6 @@
-############################################################################################
+######################################################################################################
 #
+# Organization:  Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss
 # Repository:    GeniSysAI
 # Project:       Natural Language Understanding Engine
 #
@@ -10,7 +11,7 @@
 # License:       MIT License
 # Last Modified: 2020-10-01
 #
-############################################################################################
+######################################################################################################
 
 from Classes.Helpers import Helpers
 

@@ -1,16 +1,17 @@
-############################################################################################
+######################################################################################################
 #
+# Organization:  Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss
 # Repository:    GeniSysAI
 # Project:       Natural Language Understanding Engine
 #
 # Author:        Adam Milton-Barker (AdamMiltonBarker.com)
-# Contributors:
+#
 # Title:         Data Class
 # Description:   Data helper functions.
 # License:       MIT License
-# Last Modified: 2020-08-19
+# Last Modified: 2020-10-01
 #
-############################################################################################
+######################################################################################################
 
 import json, random, nltk, numpy as np
 

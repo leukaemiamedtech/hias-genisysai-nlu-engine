@@ -1,5 +1,6 @@
-############################################################################################
+######################################################################################################
 #
+# Organization:  Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss
 # Repository:    GeniSysAI
 # Project:       Natural Language Understanding Engine
 #
@@ -8,9 +9,9 @@
 # Title:         Entities Class
 # Description:   Entities helper functions.
 # License:       MIT License
-# Last Modified: 2020-08-19
+# Last Modified: 2020-10-01
 #
-############################################################################################
+######################################################################################################
 
 import sys, os, nltk
 

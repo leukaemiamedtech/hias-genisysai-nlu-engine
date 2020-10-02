@@ -1,6 +1,6 @@
-
-############################################################################################
+######################################################################################################
 #
+# Organization:  Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss
 # Repository:    GeniSysAI
 # Project:       Natural Language Understanding Engine
 #
@@ -9,9 +9,9 @@
 # Title:         gTime Extension Class
 # Description:   Responds to time requests.
 # License:       MIT License
-# Last Modified: 2020-08-19
+# Last Modified: 2020-10-01
 #
-############################################################################################
+######################################################################################################
 
 import os
 import time
