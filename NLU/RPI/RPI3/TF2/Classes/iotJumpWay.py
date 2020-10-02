@@ -1,5 +1,6 @@
-############################################################################################
+######################################################################################################
 #
+# Organization:  Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss
 # Repository:    GeniSysAI
 # Project:       Natural Language Understanding Engine
 #
@@ -8,9 +9,9 @@
 # Title:         iotJumpWay Class
 # Description:   iotJumpWay connectivity class.
 # License:       MIT License
-# Last Modified: 2020-09-01
+# Last Modified: 2020-10-01
 #
-############################################################################################
+######################################################################################################
 
 import inspect, json, os
 
